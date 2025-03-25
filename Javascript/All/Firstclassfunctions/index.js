@@ -1,0 +1,76 @@
+//Function statement / Function declaration
+a();
+b();
+function a(){
+    console.log("Hello, World!");
+}
+
+
+//Difference in Function statement & Function expression : hoisting a can be called before it is define
+//But we cannot call the var be before it is defined it will give us error
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//Function expression
+
+var b = function(){
+    console.log("Hello, World2!");
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Anonymous function (They are used in a place where functions are used as values)An anonymous function is a function without a name.
+//  It is often used when we need a function temporarily, like in callbacks, event handlers
+
+
+function (){
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Named function Expression
+
+// Ex 1) 
+var b = function xyz(){
+    console.log("hellow world 3")
+}
+
+xyz(); //error that xyz not defined as it is defined in as local variable
+
+//Ex 2)
+
+ var b = function xyz(){
+    console.log("xyz")
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Difference between parameters and arguments
+
+var b = function(para1 ,para2){ //<- parameters
+    console.log("Hello 4");
+}
+
+b(1,2); // <= arguments
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//First class functions (the ability of a function to be used as values)
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Arrow functions
