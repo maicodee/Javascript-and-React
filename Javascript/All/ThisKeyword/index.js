@@ -1,6 +1,8 @@
+"use strict";
+
 // this in global space
 
-console.log
+// console.log(this);  // this behaves as global object in global space (window)
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -8,9 +10,17 @@ console.log
 
 // this inside a function
 
+// function x(){
+//     //the value depends on strict / non strict mode
+//     console.log(this);
+// }
+// x();
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-// this in strict mode -(this substtritution)
+// this in non-strict mode -(this substtritution)
+
+// If the value of "this" keyword is undefined/null then "this" will be replaced with global object only on strict mode
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -20,9 +30,33 @@ console.log
 
 // this inside a object method
 
+const obj = {
+    a:10,
+    x:function (){
+        console.log(this.a); 
+    }
+}
+
+obj.x();
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-// call apply blind methids (sharing methods)
+// call apply bind methids (sharing methods)
+
+const student = {
+    name: 'John',
+    printName: function (){
+        console.log(this);
+    },
+};
+
+student.printName();
+
+const student2 = {
+    a: 'cooper',
+};
+
+student.printName.call(student2); // here value of "this" is student 2
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
